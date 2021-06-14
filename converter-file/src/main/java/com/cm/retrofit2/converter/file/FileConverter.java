@@ -1,8 +1,9 @@
 package com.cm.retrofit2.converter.file;
 
 import android.os.Environment;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
 
 import com.cm.retrofit2.converter.file.body.ProgressResponseBody;
 
@@ -22,6 +23,7 @@ public class FileConverter implements Converter<ResponseBody, File> {
      * 添加请求头的key,后面数字为了防止重复
      */
     public static final String SAVE_PATH = "savePath2016050433191";
+    public static String defaultPath = "";
 
     static final FileConverter INSTANCE = new FileConverter();
 
@@ -70,7 +72,7 @@ public class FileConverter implements Converter<ResponseBody, File> {
 
         //如果保存路径为null则设置默认保存到sdcard根目录
         if(TextUtils.isEmpty(saveFilePath)){
-            saveFilePath = Environment.getExternalStorageDirectory().getAbsolutePath()+ File.separator+requestFileName;
+            saveFilePath = defaultPath+ File.separator+requestFileName;
         }
 
         return saveFilePath;

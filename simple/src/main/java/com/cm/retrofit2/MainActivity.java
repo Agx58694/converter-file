@@ -1,10 +1,11 @@
 package com.cm.retrofit2;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.cm.retrofit2.converter.file.body.ProgressResponseListener;
 import com.cm.retrofit2.service.DownloadService;
