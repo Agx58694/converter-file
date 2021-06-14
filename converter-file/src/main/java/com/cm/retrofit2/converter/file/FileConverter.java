@@ -3,8 +3,6 @@ package com.cm.retrofit2.converter.file;
 import android.os.Environment;
 import android.text.TextUtils;
 
-import androidx.annotation.Nullable;
-
 import com.cm.retrofit2.converter.file.body.ProgressResponseBody;
 
 import java.io.File;
